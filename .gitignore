@@ -38,3 +38,9 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+# 別のパソコンでクローンした場合に、
+# Webpacker::Manifest::MissingEntryError が再度発生を防ぐため
+/public/packs
+/public/packs-test
+/node_modules
