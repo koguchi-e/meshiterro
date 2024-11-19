@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 
   # サインイン後にルートパスに遷移しないよう、初期設定を上書きする
   def after_sign_in_path_for(resource)
-    about_path
+    post_images_path
   end
 
   # ログアウト後、aboutに転移
