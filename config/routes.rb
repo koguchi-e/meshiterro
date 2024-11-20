@@ -10,5 +10,5 @@ Rails.application.routes.draw do
   # 本当はdestroy(投稿削除)、update(投稿更新)、create(投稿作成)も作成されるが
   # onlyオプションを使用することで、生成するルーティングを限定している
   resources :post_images, only: [:new, :create, :index, :show, :destroy]
-  resources :users, only:[:show, :edit]
+  resources :users, only:[:show, :edit, :update]
 end
