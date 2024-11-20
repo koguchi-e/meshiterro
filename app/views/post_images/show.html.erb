@@ -2,7 +2,9 @@
     <%= image_tag @post_image.get_image %>
     <p>ショップ名：<%= @post_image.shop_name %></p>
     <p>説明：<%= @post_image.caption %></p>
-    <p>投稿ユーザ画像：<%= image_tag 'sample-author1.jpg' %></p>
+    
+    <!-- @post_image・インスタンス変数（コントローラで設定された変数で、ビュー全体でアクセス可能） -->
+    <p>ユーザアイコン：<%= image_tag @post_image.user.get_profile_image(100,100) %></p>
     <p>ユーザネーム：<%= @post_image.user.name %></p>
     <p>投稿日：<%= @post_image.created_at.strftime('%Y/%m/%d') %></p>
 

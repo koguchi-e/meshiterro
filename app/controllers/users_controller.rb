@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
+    # @post_images = インスタンス変数 
+    # show.html.erb(ビュー)内で使用する
     @post_images = @user.post_images
   end
 
