@@ -9,6 +9,10 @@ Rails.application.routes.draw do
   # resources メソッドは、ルーティングを一括して自動生成してくれる機能
   # 本当はdestroy(投稿削除)、update(投稿更新)、create(投稿作成)も作成されるが
   # onlyオプションを使用することで、生成するルーティングを限定している
-  resources :post_images, only: [:new, :create, :index, :show, :destroy]
+  resources :post_images, only: [:new, :create, :index, :show, :destroy] do
+    # 投稿画像に対してコメントされるため、post_commentsは、post_imagesに結びつける
+    # 親子関係になる
+    resources :post_comment, only: [:create]
+  end
   resources :users, only:[:show, :edit, :update]
 end
