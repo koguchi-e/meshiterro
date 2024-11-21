@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   # 本当はdestroy(投稿削除)、update(投稿更新)、create(投稿作成)も作成されるが
   # onlyオプションを使用することで、生成するルーティングを限定している
   resources :post_images, only: [:new, :create, :index, :show, :destroy] do
+    resource :favorite, only: [:create, :destroy]
     # 投稿画像に対してコメントされるため、post_commentsは、post_imagesに結びつける
     # 親子関係になる
     resources :post_comments, only: [:create, :destroy]
