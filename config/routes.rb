@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resources :post_images, only: [:new, :create, :index, :show, :destroy] do
     # 投稿画像に対してコメントされるため、post_commentsは、post_imagesに結びつける
     # 親子関係になる
-    resources :post_comment, only: [:create]
+    resources :post_comments, only: [:create, :destroy]
   end
   resources :users, only:[:show, :edit, :update]
 end
