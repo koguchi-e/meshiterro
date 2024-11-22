@@ -2,7 +2,9 @@ class ApplicationController < ActionController::Base
 
   # サインイン後にどこに遷移するかを設定しているメソッド
   # (Deviseが用意しているメソッド) 7章
+  before_action :authenticate_user!, except: [:top]
   before_action :configure_permitted_parameters, if: :devise_controller?
+
 
   # サインイン後にルートパスに遷移しないよう、初期設定を上書きする
   def after_sign_in_path_for(resource)
