@@ -1,4 +1,4 @@
-﻿class Public::FavoritesController < ApplicationController
+class FavoritesController < ApplicationController
 
   def create
     # PostImageテーブルから、いいねをしたい投稿（ID指定）を探してpost_imageに代入している
