@@ -1,24 +1,8 @@
-# README
+# meshiterro
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## DMMWEBCAMPのカリキュラム内で学習しました。
+### 学習内容
+簡単なSNSアプリケーション。
+- ログイン機能
+- いいね機能
+- 投稿削除機能　など
