@@ -37,7 +37,6 @@
   # フォームで入力されたデータが、投稿データとして許可されているパラメータかどうかをチェック
   # 応用・10章
   def post_image_params
-    # PostImageモデルへ保存した後、投稿一覧画面へリダイレクト
-    params.require(:post_image).permit(:shop_name, :image, :caption)
+    params.require(:post_image).permit(:shop_name, :image, :caption, :address)
   end
 end

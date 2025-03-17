@@ -1,12 +1,14 @@
 <div>
-    <%= image_tag @post_image.get_image %>
-    <p>ショップ名：<%= @post_image.shop_name %></p>
-    <p>説明：<%= @post_image.caption %></p>
-    
-    <!-- @post_image・インスタンス変数（コントローラで設定された変数で、ビュー全体でアクセス可能） -->
-    <p>ユーザアイコン：<%= image_tag @post_image.user.get_profile_image(100,100) %></p>
-    <p>ユーザネーム：<%= @post_image.user.name %></p>
-    <p>投稿日：<%= @post_image.created_at.strftime('%Y/%m/%d') %></p>
+    <p class="card-title">
+        <%= link_to(post_image_path(@post_image.id), class:"text-dark") do %>
+        <strong><i class="fa-solid fa-flag"></i><span> <%= @post_image.shop_name %></span></strong>
+        <% end %>
+    </p>
+    <p class="card-title">
+        <span><i class="fa-solid fa-location-dot"></i> <%= @post_image.address %></span>
+    </p>
+    <p class="card-title">説明：<%= @post_image.caption %></p>
+
     <% if @post_image.user == current_user %>
         <%= link_to "削除", post_image_path(@post_image), method: :delete %>
     <% end %>

@@ -13,19 +13,10 @@ Rails.application.routes.draw do
     get 'homes/about', to: 'homes#about', as: 'admin_about'
   end
 
-  root to: "homes#top"
-
-  get "homes/about", to: "homes#about"
-
-  resources :post_images, only: [:new, :create, :index, :show, :destroy] do
-    resources :favorites, only: [:create, :destroy]
-    resources :post_comments, only: [:create, :destroy]
-  end
-
-  resources :users, only: [:show, :edit, :update]
-
-  # ユーザー用の認証ルート
   scope module: :public do
+    root to: "homes#top"
+    get "homes/about", to: "homes#about"
+
     devise_for :users, controllers: {
       sessions: 'public/sessions'
     }

@@ -55,3 +55,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 
 gem "kaminari", "~> 1.2.1"
+
+# API学習用
+gem 'dotenv-rails'
+gem 'geocoder'

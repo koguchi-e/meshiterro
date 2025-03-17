@@ -1,4 +1,4 @@
-﻿class Public::ApplicationController < ActionController::Base
+﻿class ApplicationController < ActionController::Base
 
   # サインイン後にどこに遷移するかを設定しているメソッド
   # (Deviseが用意しているメソッド) 7章
