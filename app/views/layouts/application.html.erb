@@ -31,6 +31,9 @@
               <%= link_to '投稿フォーム', new_post_image_path, class: 'nav-link text-dark' %>
             </li>
             <li class="nav-item">
+              <%= link_to '投稿一覧', post_images_path, class: 'nav-link text-dark' %>
+            </li>
+            <li class="nav-item">
               <%= link_to 'マイページ', user_path(current_user.id), class: 'nav-link text-dark' %>
             </li>
             <% else %>
@@ -65,9 +68,9 @@
               <li>
                 <a href="" title="License informations" class="text-white-50">プライバシーポリシー</a>
               </li>
-              <li class="nav-item">
-                <%= link_to '投稿フォーム', new_post_image_path, class: 'nav-link text-dark', data: {turbolinks: "false"}  %>
-              </li>
+                <li class="nav-item">
+                  <%= link_to '投稿フォーム', new_post_image_path, class: 'nav-link text-dark', data: {turbolinks: "false"}  %>
+                </li>
             </ul>
           </div>
         </div>
